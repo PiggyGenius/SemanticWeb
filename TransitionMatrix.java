@@ -37,14 +37,14 @@ public class TransitionMatrix {
 			String line = br.readLine(); // read first line with the number of pages
 			N = Integer.parseInt(line);
 			pmatrix = new double[N][N];
-			int adjancence[][] = new int[N][N]; // keeps the adjacency  table: number of links from page i to page j
+			int adjacence[][] = new int[N][N]; // keeps the adjacency  table: number of links from page i to page j
 			int outdegree[] = new int[N]; // keeps the number of links that go out from page i
 			while((line=br.readLine())!=null){ // read the file line by line
 				String links[] = line.split("\\s+");
 				int page_i = Integer.parseInt(links[0]); // get first the page i
 				outdegree[page_i] = links.length - 1;
 				for(int j = 1; j < links.length; j++){
-					adjancence[page_i][Integer.parseInt(links[j])] += 1;
+					adjacence[page_i][Integer.parseInt(links[j])] += 1;
 				}
 			}
 
@@ -56,7 +56,7 @@ public class TransitionMatrix {
 				}
 				else {
 					for (int j = 0; j < N; j++) {
-						pmatrix[i][j] = (lambda * adjancence[i][j] / outdegree[i]) + ((1 - lambda) * count_ratio);
+						pmatrix[i][j] = (lambda * adjacence[i][j] / outdegree[i]) + ((1 - lambda) * count_ratio);
 					}
 				}
 			}
@@ -92,5 +92,4 @@ public class TransitionMatrix {
 		Algebra.printSortVector(page_rank);
 		//Algebra.printMatrix(tr.pmatrix);
 	}
-
 }
