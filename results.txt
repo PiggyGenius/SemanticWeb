@@ -1,5 +1,4 @@
-1) Varier epsilon ne change presque pas la valeur du vecteur page rank, passer epsilon de 10^-3 à 10^-4 ne change rien à 10^-3 de précision mais change à 10^-4. Passer epsilon de 10^-4 à 10^-5 change quelque chose à 10^-5 de précision. Donc reculer epsilon ne semble pas très important.
-Seul le classement de 2 et 15 est inversé à partir de epsilon = 10^-4.
+1) Varier epsilon ne change presque pas la valeur du vecteur page rank. En effet, passer epsilon de 10^-3 à 10^-4 ne change le résultat qu'à partir de la 4e décimale (et intervertit 2 pages de numéros 2 et 15), et passer epsilon de 10^-4 à 10^-5 ne change que la 5e décimale. On constate donc qu'epsilon n'a (en tout cas, sur cet exemple) que peu d'impact sur le classement.
 
 Epsilon = 0.001	 |  Epsilon = 0.0001  |  Epsilon = 0.00001
 ----------------------------------------------------------
