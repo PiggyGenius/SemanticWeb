@@ -1,0 +1,29 @@
+1) Varier epsilon ne change presque pas la valeur du vecteur page rank, passer epsilon de 10^-3 à 10^-4 ne change rien à 10^-3 de précision mais change à 10^-4. Passer epsilon de 10^-4 à 10^-5 change quelque chose à 10^-5 de précision. Donc reculer epsilon ne semble pas très important.
+Seul le classement de 2 et 15 est inversé à partir de epsilon = 10^-4.
+
+Epsilon = 0.001	 |  Epsilon = 0.0001  |  Epsilon = 0.00001
+----------------------------------------------------------
+Page 0 --> 16		Page 0 --> 16		 Page 0 --> 16 	
+Page 1 --> 10       Page 1 --> 10        Page 1 --> 10
+Page 2 --> 5        Page 2 --> 6         Page 2 --> 6
+Page 3 --> 12       Page 3 --> 12        Page 3 --> 12
+Page 4 --> 7        Page 4 --> 7         Page 4 --> 7
+Page 5 --> 1        Page 5 --> 1         Page 5 --> 1
+Page 6 --> 4        Page 6 --> 4         Page 6 --> 4
+Page 7 --> 11       Page 7 --> 11        Page 7 --> 11
+Page 8 --> 13       Page 8 --> 13        Page 8 --> 13
+Page 9 --> 9        Page 9 --> 9         Page 9 --> 9
+Page 10 --> 18      Page 10 --> 18       Page 10 --> 18
+Page 11 --> 19      Page 11 --> 19       Page 11 --> 19
+Page 12 --> 8       Page 12 --> 8        Page 12 --> 8
+Page 13 --> 14      Page 13 --> 14       Page 13 --> 14
+Page 14 --> 0       Page 14 --> 0        Page 14 --> 0
+Page 15 --> 6       Page 15 --> 5        Page 15 --> 5
+Page 16 --> 2       Page 16 --> 2        Page 16 --> 2
+Page 17 --> 15      Page 17 --> 15       Page 17 --> 15
+Page 18 --> 3       Page 18 --> 3        Page 18 --> 3
+Page 19 --> 17      Page 19 --> 17       Page 19 --> 17
+
+2) En ajoutant des autorités on voit qu'elles sont classés premières tandis que les hubs sont eux derniers (premier --> max du page_rank).
+
+3) 
