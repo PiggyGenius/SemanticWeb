@@ -84,7 +84,7 @@ public class TransitionMatrix {
 
 	/** This method prints the transition matrix */ 
 	public static void main(String args[]){
-		// arguments: the file graph and the lambda value
+		// arguments: the file graph and the lambda value and epsilon
 		double[] page_rank;
 		TransitionMatrix tr = new TransitionMatrix(args[0],Double.parseDouble(args[1]));
 		page_rank = tr.powerPageRank(Double.parseDouble(args[2]));
