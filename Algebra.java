@@ -25,23 +25,21 @@ public final class Algebra {
 	}
 
 	public static void printVector(double[] vector){
-		for(int i = 0; i < vector.length; i++){
-			System.out.print(vector[i] + " ");
-		}
+		for(int i = 0; i < vector.length; i++)
+			System.out.format("%.5f ",vector[i]);
 		System.out.println();
 	}
 
 	public static void printVector(int[] vector){
-		for(int i = 0; i < vector.length; i++){
-			System.out.print(vector[i] + " ");
-		}
+		for(int i = 0; i < vector.length; i++)
+			System.out.format("%.5f ",vector[i]);
 		System.out.println();
 	}
 
 	public static void printMatrix(double[][] matrix){
 		for (int i = 0; i < matrix.length; i++)  {
 			for (int j = 0; j < matrix[i].length; j++)
-				System.out.format("%.4f ",matrix[i][j]);
+				System.out.format("%.5f ",matrix[i][j]);
 			System.out.println();
 		}
 	}
