@@ -31,4 +31,6 @@ Page 19 --> 17      Page 19 --> 17       Page 19 --> 17
 
 2) En ajoutant des autorités on voit qu'elles sont classés premières tandis que les hubs sont eux derniers (premier --> max du page_rank).
 
-3) 
+3) On peut faire progresser artificiellement une page dans le classement en créant des pages "factices" référençant cette page. Par exemple, la page 3 (pour l'instant 12e du classement), passe 19e si on lui ajoute 10 liens vers elle-même. Une façon de ne pas être piégé par ce genre de techniques serait tout simplement de ne pas prendre en compte ces liens.
+
+Une autre solution est de créer des pages factices référençant la page que l'on souhaite faire progresser. De la même manière, avec 5 pages factices comportant chacune un lien vers la page 3, on fait progresser cette dernière de la 12e à la 21e place.
