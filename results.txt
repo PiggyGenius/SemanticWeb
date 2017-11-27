@@ -1,4 +1,4 @@
-1) Varier epsilon ne change presque pas la valeur du vecteur page rank. En effet, passer epsilon de 10^-3 à 10^-4 ne change le résultat qu'à partir de la 4e décimale (et intervertit 2 pages de numéros 2 et 15), et passer epsilon de 10^-4 à 10^-5 ne change que la 5e décimale. On constate donc qu'epsilon n'a (en tout cas, sur l'exemple du small graph donné) que peu d'impact sur le classement.
+1) Varier epsilon ne change presque pas la valeur du vecteur page rank. En effet, passer epsilon de 10^-3 à 10^-4 ne change le résultat qu'à partir de la 4e décimale (et intervertit 2 pages de numéros 2 et 15), et passer epsilon de 10^-4 à 10^-5 ne change que la 5e décimale. On constate donc qu'epsilon n'a (en tout cas, sur l'exemple du small graph donné) que peu d'impact sur le classement (où la première place du classement correspond au score page rank le plus faible).
 
 Epsilon = 0.001 --> 0.06474 0.04816 0.03639 0.05342 0.04613 0.02528 0.03612 0.05328 0.05504 0.04784 0.08076 0.09141 0.04681 0.05654 0.02107 0.03640 0.02803 0.05931 0.03513 0.07812
 
@@ -29,6 +29,32 @@ Page 17 --> 15      Page 17 --> 15       Page 17 --> 15
 Page 18 --> 3       Page 18 --> 3        Page 18 --> 3
 Page 19 --> 17      Page 19 --> 17       Page 19 --> 17
 
-2) En ajoutant des autorités on voit qu'elles sont classés premières tandis que les hubs sont eux derniers (premier --> max du vecteur page_rank).
+2) En ajoutant des autorités on voit qu'elles sont classés premières tandis que les hubs sont eux derniers (premier --> max du vecteur page_rank). Le fichier small-custom.txt modifile le graph small en y ajoutant un hub et une autorité. O est une autorité et 2 est un hub.
+
+Epsilon = 0.001 : 0.18472 0.03612 0.00785 0.03836 0.05334 0.03758 0.02941 0.05682 0.03823 0.05408 0.07393 0.08346 0.04230 0.04729 0.01825 0.02291 0.03746 0.04321 0.02489 0.06977
+
+Page 0 --> 19
+Page 1 --> 5
+Page 2 --> 0
+Page 3 --> 9
+Page 4 --> 13
+Page 5 --> 7
+Page 6 --> 4
+Page 7 --> 15
+Page 8 --> 8
+Page 9 --> 14
+Page 10 --> 17
+Page 11 --> 18
+Page 12 --> 10
+Page 13 --> 12
+Page 14 --> 1
+Page 15 --> 2
+Page 16 --> 6
+Page 17 --> 11
+Page 18 --> 3
+Page 19 --> 16
+
 
 3) 
+
+4) Lorsque lambda est égale à 0, le page rank vaut 1/N sur chacune de ses dimensions. Lorsqu'il vaut 1 le score de l'autorité est encore plus important qu'avec lambda = 0.85 et celui du hub est égale à 0 (logique puisque la probabilité ne prend plus en compte la possibilité de sauter d'une page à une autre). Lorsque lambda est très proche de 0, le score des pages est extrêmement proche puisque la probabilité de prendre un lien est très faible et ce qui implique que l'autorité à un score très peu supérieur à celui du hub.
